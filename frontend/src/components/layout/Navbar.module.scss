@@ -1,0 +1,48 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.header {
+  --header-height: 78px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  background: rgba($color-white,.97);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 1px 0 rgba($color-navy-dark,.08);
+}
+.navbar { border-bottom: 1px solid rgba($color-navy-dark,.08); }
+.inner { min-height: var(--header-height); display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.brand { display: inline-flex; align-items: center; }
+.logo { width: 126px; height: auto; object-fit: contain; mix-blend-mode: multiply; }
+.headerActions { display: flex; align-items: center; gap: 1rem; }
+.quoteLink { display: none; align-items: center; min-height: 34px; padding: 0 .8rem; border: 1px solid rgba($color-navy-dark,.18); color: $color-navy-dark; font-size: .63rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; transition: background $transition-fast, border-color $transition-fast, color $transition-fast; }
+.quoteLink:hover { background: $color-accent; border-color: $color-accent; color: $color-navy-deep; }
+.menuTrigger { display: inline-flex; align-items: center; gap: .55rem; padding: .55rem 0 .55rem .55rem; border: 0; background: transparent; color: $color-navy-dark; font-size: .63rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; cursor: pointer; }
+.menuTrigger:hover { color: $color-navy; }
+.menuTrigger i { position: relative; display: block; width: 21px; height: 14px; border-top: 1px solid $color-navy-dark; border-bottom: 1px solid $color-navy-dark; }
+.menuTrigger i::after { position: absolute; top: 6px; left: 0; width: 100%; height: 1px; content: ''; background: $color-navy-dark; }
+.triggerOpen { border-color: transparent !important; }
+.triggerOpen::before { position: absolute; top: 6px; left: 0; width: 100%; height: 1px; content: ''; background: $color-navy-dark; transform: rotate(45deg); }
+.triggerOpen::after { transform: rotate(-45deg); }
+.menuPanel { position: absolute; inset: 100% 0 auto; max-height: calc(100vh - var(--header-height)); overflow: auto; background: $color-white; border-bottom: 1px solid $color-border; box-shadow: $shadow-lg; opacity: 0; visibility: hidden; transform: translateY(-12px); transition: opacity $transition-normal, transform $transition-normal, visibility $transition-normal; }
+.menuPanelOpen { opacity: 1; visibility: visible; transform: translateY(0); }
+.menuIntro { display: flex; justify-content: space-between; align-items: end; gap: 2rem; padding: 2.3rem 0 1.5rem; border-bottom: 1px solid $color-border; }
+.menuIntro span { color: $color-accent; font-size: .62rem; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
+.menuIntro h2 { max-width: 18ch; margin-top: .45rem; color: $color-navy-dark; font-family: $font-family-display; font-size: clamp(1.7rem, 3vw, 2.8rem); font-weight: 400; line-height: 1.02; }
+.menuIntro button { align-self: start; padding: .45rem 0; border: 0; background: transparent; color: $color-navy-dark; font-size: .67rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; cursor: pointer; }
+.directLinks { display: flex; flex-wrap: wrap; gap: 1rem 1.8rem; padding: 1.15rem 0; border-bottom: 1px solid $color-border; }
+.directLinks a { color: $color-navy-dark; font-size: .72rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.directLinks a:hover { color: $color-navy; }
+.menuGrid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 2rem 1.2rem; padding: 2rem 0; }
+.menuGroup { min-width: 0; }
+.groupTitle { display: flex; justify-content: space-between; align-items: center; margin-bottom: .75rem; color: $color-navy-dark; font-size: .74rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+.groupTitle span { color: $color-accent; }
+.menuGroup ul { display: grid; gap: .35rem; }
+.menuGroup li a { display: block; padding: .2rem 0; color: $color-text-muted; font-size: .75rem; line-height: 1.4; }
+.menuGroup li a:hover { color: $color-navy; }
+.menuFooter { display: flex; flex-direction: column; gap: .5rem; padding: 1rem 0 1.4rem; border-top: 1px solid $color-border; color: $color-text-muted; font-size: .62rem; line-height: 1.5; }
+.menuFooter span:first-child { color: $color-accent; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+@include respond-to(tablet) { .quoteLink { display: inline-flex; } .menuGrid { grid-template-columns: repeat(4, minmax(0,1fr)); gap: 2rem; } .menuFooter { flex-direction: row; justify-content: space-between; } }
+@include respond-to(desktop) { .header { --header-height: 74px; } .logo { width: 132px; } }

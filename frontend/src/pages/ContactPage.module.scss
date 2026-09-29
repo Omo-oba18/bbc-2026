@@ -1,0 +1,22 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+.page { min-height: 70vh; padding: 5rem 0; background: $color-background-soft; }
+.heading { max-width: 760px; }
+.heading > span { color: $color-accent; font-size: .65rem; font-weight: 900; letter-spacing: .15em; text-transform: uppercase; }
+.heading h1 { margin: .7rem 0 1rem; color: $color-navy-dark; font-family: $font-family-display; font-size: clamp(2.8rem, 6vw, 5.5rem); font-weight: 400; line-height: .95; letter-spacing: -.04em; }
+.heading p { color: $color-text-muted; line-height: 1.75; }
+.grid { display: grid; gap: 2rem; margin-top: 3rem; }
+.form { display: grid; gap: 1rem; padding: clamp(1.2rem, 3vw, 2rem); background: $color-white; border: 1px solid $color-border; }
+.form label { display: grid; gap: .4rem; color: $color-navy-dark; font-size: .68rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+.form input, .form select, .form textarea { width: 100%; border: 1px solid $color-border; border-radius: $radius-sm; background: $color-white; color: $color-text; padding: .78rem .8rem; font: inherit; font-size: .85rem; outline: none; }
+.form input:focus, .form select:focus, .form textarea:focus { border-color: $color-navy; box-shadow: 0 0 0 3px rgba($color-navy,.1); }
+.two { display: grid; gap: 1rem; }
+.side { align-self: stretch; padding: 2rem; background: $color-navy-dark; color: $color-white; }
+.side > span { color: $color-accent; font-size: 2.3rem; font-weight: 900; letter-spacing: -.08em; }
+.side h2 { margin: 1.5rem 0 .8rem; color: $color-white; font-family: $font-family-display; font-size: 2.5rem; font-weight: 300; line-height: 1; }
+.side p { color: rgba($color-white,.65); line-height: 1.7; }
+.side div { display: grid; gap: .2rem; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba($color-white,.12); }
+.side strong { font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; }
+.side small { color: rgba($color-white,.5); }
+.notice { color: #46705a; font-size: .76rem; line-height: 1.5; }
+@include respond-to(tablet) { .grid { grid-template-columns: 1.15fr .85fr; align-items: stretch; } .two { grid-template-columns: 1fr 1fr; } }

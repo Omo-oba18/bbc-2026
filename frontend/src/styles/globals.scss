@@ -1,0 +1,18 @@
+@use 'variables' as *;
+@use 'reset';
+@use 'typography';
+@use 'utilities';
+@use 'animations';
+
+:root {
+  color-scheme: light;
+  background: $color-white;
+}
+
+body {
+  background: $color-white;
+}
+
+
+body.menu-open { overflow: hidden; }
+::selection { background: rgba(183, 211, 52, .28); color: #092a52; }

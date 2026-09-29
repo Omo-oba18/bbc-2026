@@ -1,0 +1,30 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { MainLayout } from '../layouts/MainLayout'
+import { HomePage } from '../pages/HomePage'
+import { DirectoryPage } from '../pages/DirectoryPage'
+import { NotFoundPage } from '../pages/NotFoundPage'
+import { ContactPage } from '../pages/ContactPage'
+import { ProjectsPage } from '../pages/ProjectsPage'
+
+export function AppRouter() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/missions" element={<DirectoryPage type="missions" eyebrow="Nos missions" title="Les missions de BBC" description="Une organisation pensée pour présenter clairement les missions de contrôle, de vérification et d’accompagnement." />} />
+          <Route path="/missions/:slug" element={<DirectoryPage type="missions" eyebrow="Mission BBC" title="" description="" />} />
+          <Route path="/competences" element={<DirectoryPage type="competences" eyebrow="Compétences" title="Nos domaines d’expertise" description="Les compétences techniques seront structurées ici afin de permettre une navigation simple par domaine." />} />
+          <Route path="/competences/:slug" element={<DirectoryPage type="competences" eyebrow="Compétence BBC" title="" description="" />} />
+          <Route path="/agences" element={<DirectoryPage type="agences" eyebrow="Un réseau de proximité" title="Nos agences" description="Le réseau territorial BBC sera présenté avec les informations officielles de chaque implantation." />} />
+          <Route path="/agences/:slug" element={<DirectoryPage type="agences" eyebrow="Agence BBC" title="" description="" />} />
+          <Route path="/groupe" element={<DirectoryPage type="groupe" eyebrow="Le groupe" title="BBC, une équipe et une histoire" description="Une section dédiée à l’histoire, aux équipes, aux agréments, au recrutement et aux actualités du groupe." />} />
+          <Route path="/groupe/:slug" element={<DirectoryPage type="groupe" eyebrow="Groupe BBC" title="" description="" />} />
+          <Route path="/realisations" element={<ProjectsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  )
+}

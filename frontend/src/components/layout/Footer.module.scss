@@ -1,0 +1,20 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.footer { margin-top: auto; padding: 0 0 1.25rem; background: $color-navy-deep; color: $color-white; }
+.cta { display: grid; gap: 1.5rem; align-items: center; padding: 3.5rem 0; border-bottom: 1px solid rgba($color-white,.1); }
+.cta span { color: $color-accent; font-size: .65rem; font-weight: 900; letter-spacing: .15em; text-transform: uppercase; }
+.cta h2 { max-width: 16ch; margin-top: .55rem; color: $color-white; font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 300; line-height: 1; }
+.cta > a { justify-self: start; display: inline-flex; align-items: center; gap: 1rem; padding: .85rem 1.1rem; background: $color-accent; color: $color-navy-deep; font-size: .68rem; font-weight: 900; text-transform: uppercase; }
+.top { display: grid; gap: 3rem; padding: 4rem 0; }
+.brandBlock { max-width: 300px; }
+.brandBlock img { width: 118px; height: auto; mix-blend-mode: screen; filter: grayscale(1) brightness(0) invert(1); }
+.brandBlock p { margin-top: 1rem; color: rgba($color-white,.75); font-size: .72rem; font-weight: 700; text-transform: uppercase; }
+.brandBlock small { display: block; margin-top: .8rem; color: rgba($color-white,.48); line-height: 1.6; }
+.groups { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 2rem 1.5rem; }
+.groups h3 { margin-bottom: .8rem; color: $color-white; font-size: .65rem; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+.groups ul { display: grid; gap: .42rem; }
+.groups a { color: rgba($color-white,.58); font-size: .7rem; line-height: 1.35; }
+.groups a:hover { color: $color-white; }
+.bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .75rem; padding-top: 1rem; border-top: 1px solid rgba($color-white,.1); color: rgba($color-white,.38); font-size: .62rem; }
+@include respond-to(tablet) { .cta { grid-template-columns: 1fr auto; } .cta > a { justify-self: end; } .top { grid-template-columns: .75fr 1.6fr; } .groups { grid-template-columns: repeat(4, minmax(0,1fr)); } }

@@ -1,0 +1,21 @@
+@use '../styles/variables' as *;
+
+.page {
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+  padding: 5rem 0;
+  text-align: center;
+
+  p {
+    max-width: 50ch;
+    margin: 1rem auto 1.75rem;
+  }
+}
+
+.code {
+  color: $color-navy;
+  font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: 800;
+  line-height: 1;
+}

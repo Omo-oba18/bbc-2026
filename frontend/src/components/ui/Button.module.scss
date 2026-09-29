@@ -1,0 +1,54 @@
+@use '../../styles/variables' as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.7rem 1.1rem;
+  border-radius: $radius-md;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform $transition-fast, background $transition-fast, color $transition-fast, box-shadow $transition-fast;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+}
+
+.primary {
+  background: $color-navy;
+  color: $color-white;
+  box-shadow: $shadow-sm;
+
+  &:hover,
+  &:focus-visible {
+    background: $color-navy-dark;
+    box-shadow: $shadow-md;
+  }
+}
+
+.secondary {
+  background: $color-navy-light;
+  color: $color-navy-dark;
+
+  &:hover,
+  &:focus-visible {
+    background: #e1ebf7;
+  }
+}
+
+.text {
+  min-height: auto;
+  padding: 0.25rem 0;
+  color: $color-navy;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+
+  &:hover,
+  &:focus-visible {
+    color: $color-navy-dark;
+    transform: translateX(3px);
+  }
+}
