@@ -1,0 +1,543 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+/* ---------------------------------------------------------------- shared */
+
+.eyebrow {
+  display: inline-block;
+  color: $color-accent-dark;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.centeredHeading {
+  max-width: 44ch;
+  margin: 0 auto 2.75rem;
+  text-align: center;
+
+  h2 {
+    margin-top: 0.7rem;
+    font-family: $font-family-display;
+    font-size: clamp(1.6rem, 3.4vw, 2.6rem);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+  }
+}
+
+.referenceNote {
+  margin-top: 2rem;
+  color: $color-text-muted;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* ------------------------------------------------------- sticky quote tab */
+
+.quoteTab {
+  position: fixed;
+  top: 52%;
+  right: 0;
+  z-index: 900;
+  display: none;
+  padding: 0.85rem 1.1rem;
+  background: $color-accent-dark;
+  border-radius: $radius-sm 0 0 $radius-sm;
+  color: $color-white;
+  font-size: 0.64rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  writing-mode: vertical-rl;
+  box-shadow: $shadow-md;
+  transition: background $transition-fast;
+
+  &:hover,
+  &:focus-visible {
+    background: $color-navy-dark;
+  }
+
+  @include respond-to(desktop) {
+    display: block;
+  }
+}
+
+/* -------------------------------------------------------------- hero */
+
+.hero {
+  padding: 3.5rem 0 4rem;
+  background: linear-gradient(180deg, $color-white 0%, $color-navy-light 100%);
+}
+
+.heroGrid {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+
+  @include respond-to(desktop) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+    gap: 3.5rem;
+  }
+}
+
+.heroCopy {
+  h1 {
+    font-family: $font-family-display;
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+  }
+}
+
+.heroLead {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 1.4rem;
+  color: $color-navy;
+  font-size: 0.82rem;
+  font-weight: 900;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  span {
+    flex: none;
+    width: 10px;
+    height: 10px;
+    margin-top: 0.28rem;
+    background: $color-accent-dark;
+    transform: rotate(45deg);
+  }
+}
+
+.heroText {
+  max-width: 54ch;
+  margin: 1.4rem 0 2rem;
+  font-size: 0.97rem;
+  line-height: 1.75;
+}
+
+.heroVisual {
+  margin: 0;
+  overflow: hidden;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-md;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+  }
+}
+
+/* ------------------------------------------------------------ process */
+
+.process {
+  padding: 3.25rem 0;
+  background: $color-navy-dark;
+}
+
+.processTitle {
+  max-width: 62ch;
+  color: $color-white;
+  font-family: $font-family-display;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.processGrid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 0;
+  list-style: none;
+
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.processCard {
+  display: flex;
+  gap: 0.85rem;
+  padding: 1.15rem 1.25rem;
+  background: rgba($color-white, 0.06);
+  border: 1px solid rgba($color-white, 0.12);
+  border-radius: $radius-md;
+
+  strong {
+    display: block;
+    color: $color-white;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+  }
+
+  p {
+    margin-top: 0.4rem;
+    color: rgba($color-white, 0.72);
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+}
+
+.check {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin-top: 0.15rem;
+
+  &::before {
+    display: block;
+    width: 6px;
+    height: 11px;
+    border-right: 2px solid $color-accent;
+    border-bottom: 2px solid $color-accent;
+    content: '';
+    transform: rotate(45deg) translate(1px, -2px);
+  }
+}
+
+/* --------------------------------------------------------- references */
+
+.references {
+  padding: 4.5rem 0;
+  background: $color-white;
+}
+
+.referenceGrid {
+  display: grid;
+  gap: 1.75rem 1.5rem;
+  padding: 0;
+  list-style: none;
+
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include respond-to(desktop) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.referenceCard {
+  h3 {
+    margin-top: 1rem;
+    font-size: 0.82rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin-top: 0.5rem;
+    font-size: 0.83rem;
+    line-height: 1.65;
+  }
+}
+
+.referenceImage {
+  overflow: hidden;
+  border-radius: $radius-md;
+  background: $color-background-soft;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    transition: transform $transition-normal;
+  }
+
+  .referenceCard:hover & img {
+    transform: scale(1.04);
+  }
+}
+
+.referenceLocation {
+  display: inline-block;
+  margin-top: 0.6rem;
+  color: $color-accent-dark;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ---------------------------------------------------------- statement */
+
+.statement {
+  padding: 4.5rem 0;
+  background: $color-navy-light;
+}
+
+.statementInner {
+  max-width: 62ch;
+  margin-inline: auto;
+  text-align: center;
+
+  h2 {
+    font-family: $font-family-display;
+    font-size: clamp(1.6rem, 3.4vw, 2.6rem);
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin-top: 1.15rem;
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+}
+
+/* ------------------------------------------------------------- atouts */
+
+.atouts {
+  padding: 4.5rem 0;
+  background: $color-white;
+}
+
+.atoutGrid {
+  display: grid;
+  gap: 1.5rem;
+  padding: 0;
+  list-style: none;
+
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include respond-to(desktop) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.atoutCard {
+  padding-bottom: 1.25rem;
+  background: $color-white;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  box-shadow: $shadow-sm;
+  overflow: hidden;
+  transition: box-shadow $transition-fast, transform $transition-fast;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $shadow-md;
+  }
+
+  strong {
+    display: block;
+    padding: 1.05rem 1.15rem 0;
+    color: $color-navy-dark;
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  p {
+    padding: 0.55rem 1.15rem 0;
+    font-size: 0.82rem;
+    line-height: 1.65;
+  }
+}
+
+.atoutImage img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 31 / 22;
+  object-fit: cover;
+}
+
+/* ------------------------------------------------------- testimonials */
+
+.testimonials {
+  padding: 4.5rem 0 4rem;
+  background: $color-background-soft;
+}
+
+.testimonialBox {
+  max-width: 760px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 84px;
+  height: 84px;
+  background: $color-navy-dark;
+  border: 3px solid $color-white;
+  border-radius: 50%;
+  color: $color-white;
+  font-family: $font-family-display;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  box-shadow: $shadow-sm;
+}
+
+.testimonialTheme {
+  display: block;
+  margin-top: 1.25rem;
+  color: $color-accent-dark;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.testimonialBox blockquote {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) 34px;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 1rem 0 0;
+
+  p {
+    color: $color-navy-dark;
+    font-size: clamp(0.95rem, 1.9vw, 1.2rem);
+    font-style: italic;
+    line-height: 1.65;
+  }
+
+  button {
+    width: 34px;
+    height: 34px;
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: 50%;
+    color: $color-navy-dark;
+    font-size: 1.15rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background $transition-fast, color $transition-fast;
+
+    &:hover,
+    &:focus-visible {
+      background: $color-navy-dark;
+      color: $color-white;
+    }
+  }
+}
+
+.testimonialBox footer {
+  margin-top: 1.25rem;
+
+  strong {
+    display: block;
+    color: $color-navy-dark;
+    font-size: 0.8rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  span {
+    display: block;
+    margin-top: 0.2rem;
+    color: $color-text-muted;
+    font-size: 0.72rem;
+  }
+}
+
+.dots {
+  display: flex;
+  gap: 0.45rem;
+  justify-content: center;
+  margin-top: 1.25rem;
+
+  button {
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    background: rgba($color-navy-dark, 0.22);
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background $transition-fast, transform $transition-fast;
+
+    &:hover {
+      background: rgba($color-navy-dark, 0.45);
+    }
+  }
+}
+
+.dotActive {
+  background: $color-accent-dark !important;
+  transform: scale(1.25);
+}
+
+/* -------------------------------------------------------------- steps */
+
+.steps {
+  padding: 4.5rem 0;
+  background: $color-white;
+}
+
+.stepGrid {
+  display: grid;
+  gap: 1.25rem;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include respond-to(desktop) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.stepCard {
+  padding: 1.5rem 1.35rem;
+  background: $color-background-soft;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+
+  strong {
+    display: block;
+    margin-top: 0.95rem;
+    color: $color-navy-dark;
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin-top: 0.55rem;
+    font-size: 0.82rem;
+    line-height: 1.65;
+  }
+}
+
+.stepNumber {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: $color-accent-dark;
+  border-radius: 50%;
+  color: $color-white;
+  font-size: 0.82rem;
+  font-weight: 900;
+}

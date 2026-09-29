@@ -9,7 +9,7 @@ const menuGroups = [
   { title: 'Compétences', path: '/competences', items: competenceItems },
   { title: 'Missions', path: '/missions', items: missionItems },
   { title: 'Agences', path: '/agences', items: agencyItems },
-  { title: 'Groupe', path: '/groupe', items: groupItems },
+  { title: 'Groupe', path: '/groupe', items: groupItems, cta: true },
 ]
 
 function itemPath(group, item) {
@@ -63,6 +63,9 @@ export function Navbar() {
                     <li key={item.label}><Link to={itemPath(group, item)} onClick={closeMenu}>{item.label}</Link></li>
                   ))}
                 </ul>
+                {group.cta && (
+                  <Link to="/contact" className={styles.menuQuote} onClick={closeMenu}>Devis gratuit</Link>
+                )}
               </section>
             ))}
           </div>

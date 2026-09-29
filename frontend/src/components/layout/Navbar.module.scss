@@ -42,7 +42,10 @@
 .menuGroup ul { display: grid; gap: .35rem; }
 .menuGroup li a { display: block; padding: .2rem 0; color: $color-text-muted; font-size: .75rem; line-height: 1.4; }
 .menuGroup li a:hover { color: $color-navy; }
+.menuQuote { display: inline-flex; align-items: center; justify-content: center; margin-top: 1.25rem; padding: .8rem 1.6rem; background: $color-accent-dark; border-radius: 999px; color: $color-white; font-size: .66rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; transition: background $transition-fast, transform $transition-fast; }
+.menuQuote:hover, .menuQuote:focus-visible { background: $color-navy-dark; transform: translateY(-1px); }
 .menuFooter { display: flex; flex-direction: column; gap: .5rem; padding: 1rem 0 1.4rem; border-top: 1px solid $color-border; color: $color-text-muted; font-size: .62rem; line-height: 1.5; }
 .menuFooter span:first-child { color: $color-accent; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
-@include respond-to(tablet) { .quoteLink { display: inline-flex; } .menuGrid { grid-template-columns: repeat(4, minmax(0,1fr)); gap: 2rem; } .menuFooter { flex-direction: row; justify-content: space-between; } }
+@include respond-to(tablet) { .quoteLink { display: inline-flex; } .menuGrid { grid-template-columns: repeat(4, minmax(0,1fr)); gap: 2rem; }
+.menuFooter { flex-direction: row; justify-content: space-between; } }
 @include respond-to(desktop) { .header { --header-height: 74px; } .logo { width: 132px; } }

@@ -5,6 +5,7 @@ import { DirectoryPage } from '../pages/DirectoryPage'
 import { NotFoundPage } from '../pages/NotFoundPage'
 import { ContactPage } from '../pages/ContactPage'
 import { ProjectsPage } from '../pages/ProjectsPage'
+import { ControleConstructionPage } from '../pages/ControleConstructionPage'
 
 export function AppRouter() {
   return (
@@ -13,6 +14,7 @@ export function AppRouter() {
         <Route element={<MainLayout />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/missions" element={<DirectoryPage type="missions" eyebrow="Nos missions" title="Les missions de BBC" description="Une organisation pensée pour présenter clairement les missions de contrôle, de vérification et d’accompagnement." />} />
+          <Route path="/missions/controle-construction" element={<ControleConstructionPage />} />
           <Route path="/missions/:slug" element={<DirectoryPage type="missions" eyebrow="Mission BBC" title="" description="" />} />
           <Route path="/competences" element={<DirectoryPage type="competences" eyebrow="Compétences" title="Nos domaines d’expertise" description="Les compétences techniques seront structurées ici afin de permettre une navigation simple par domaine." />} />
           <Route path="/competences/:slug" element={<DirectoryPage type="competences" eyebrow="Compétence BBC" title="" description="" />} />
