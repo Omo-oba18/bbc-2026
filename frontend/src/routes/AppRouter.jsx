@@ -6,6 +6,7 @@ import { NotFoundPage } from '../pages/NotFoundPage'
 import { ContactPage } from '../pages/ContactPage'
 import { ProjectsPage } from '../pages/ProjectsPage'
 import { ControleConstructionPage } from '../pages/ControleConstructionPage'
+import { PerformanceEnergetiquePage } from '../pages/PerformanceEnergetiquePage'
 
 export function AppRouter() {
   return (
@@ -17,6 +18,7 @@ export function AppRouter() {
           <Route path="/missions/controle-construction" element={<ControleConstructionPage />} />
           <Route path="/missions/:slug" element={<DirectoryPage type="missions" eyebrow="Mission BBC" title="" description="" />} />
           <Route path="/competences" element={<DirectoryPage type="competences" eyebrow="Compétences" title="Nos domaines d’expertise" description="Les compétences techniques seront structurées ici afin de permettre une navigation simple par domaine." />} />
+          <Route path="/competences/performance-energetique" element={<PerformanceEnergetiquePage />} />
           <Route path="/competences/:slug" element={<DirectoryPage type="competences" eyebrow="Compétence BBC" title="" description="" />} />
           <Route path="/agences" element={<DirectoryPage type="agences" eyebrow="Un réseau de proximité" title="Nos agences" description="Le réseau territorial BBC sera présenté avec les informations officielles de chaque implantation." />} />
           <Route path="/agences/:slug" element={<DirectoryPage type="agences" eyebrow="Agence BBC" title="" description="" />} />
