@@ -3,7 +3,7 @@ import { Container } from '../layout/Container'
 import { useReveal } from './useReveal'
 import styles from './StatementBlock.module.scss'
 
-export function StatementBlock({ title, paragraphs, bullets, closing }) {
+export function StatementBlock({ title, paragraphs = [], bullets, closing }) {
   const reveal = useReveal()
 
   return (
