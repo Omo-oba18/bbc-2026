@@ -10,62 +10,76 @@ import reference08 from '../../assets/images/competences/securite-sur-chantier/r
 import reference09 from '../../assets/images/competences/securite-sur-chantier/reference-09.jpg'
 
 /**
- * Contenu de la page compétence « Sécurité sur chantier ».
- * Textes et typologies d'ouvrages provisoires, à remplacer par les données
- * officielles BBC sans toucher au gabarit ServicePage.
+ * Contenu de la compétence « Sécurité sur chantier ».
+ *
+ * Cette page traite les risques techniques : ce que les équipes savent
+ * regarder en arrivant sur site. L'organisation contractuelle de la
+ * prévention — plan de coordination, registre-journal, dossier
+ * d'interventions — relève de la mission « Coordination SPS ».
+ * Garder cette frontière : les deux pages se recouvraient auparavant.
+ *
+ * Le champ `location` des cartes porte ici le danger encouru, non un lieu.
+ *
+ * Textes provisoires.
  */
 export const securiteSurChantier = {
   slug: 'securite-sur-chantier',
 
   hero: {
-    title: 'Sécurité et coordination sur vos chantiers',
-    lead: 'Pour les maîtres d’ouvrage qui veulent éviter les accidents et être couverts',
-    text: 'Le maître d’ouvrage reste responsable des opérations qu’il engage. La coordination sécurité organise la cohabitation des entreprises sur site, encadre les situations à risque et réduit concrètement la probabilité d’accident.',
+    title: 'Les risques techniques d’un chantier',
+    lead: 'Chute de hauteur, levage, fouilles, point chaud : là où se produisent réellement les accidents',
+    text: 'La sécurité d’un chantier n’est pas un sujet unique. C’est une série de risques distincts, chacun avec ses règles, ses protections et sa façon de mal tourner. Cette compétence, c’est ce que nos équipes savent regarder en arrivant sur site — l’organisation contractuelle de la prévention, elle, relève de la mission Coordination SPS.',
     cta: { label: 'Devis gratuit', to: '/contact' },
-    image: { src: heroImage, alt: 'Équipe de chantier équipée de casques et de gilets lors d’une visite de sécurité' },
+    image: { src: heroImage, alt: 'Équipe de chantier équipée de casques et de gilets lors d’une inspection' },
   },
 
   process: {
-    title: 'Votre spécialiste BBC coordonne la sécurité et l’hygiène entre les entreprises de votre chantier.',
+    title: 'Chaque famille de risques a ses points de contrôle, ses protections et sa façon de mal tourner.',
     steps: [
-      { title: 'Coordination en amont', text: 'Organisation des interventions et rédaction du plan général de coordination avant le démarrage.' },
-      { title: 'Contrôles sur chantier', text: 'Visites régulières et inopinées pour vérifier les dispositions de sécurité réellement appliquées.' },
-      { title: 'Dossier de fin d’opération', text: 'Constitution du dossier des interventions ultérieures, remis à la livraison de l’ouvrage.' },
+      { title: 'Identifier', text: 'Repérer, sur les plans comme sur le terrain, les situations qui exposent réellement les intervenants.' },
+      { title: 'Prescrire', text: 'Proposer la protection collective adaptée avant de se rabattre sur l’équipement individuel.' },
+      { title: 'Vérifier', text: 'Constater sur place que la disposition prévue est en place, complète, et qu’elle tient dans la durée.' },
     ],
   },
 
   references: {
-    eyebrow: 'Nos références',
-    title: 'Des opérations menées en toute sécurité',
-    note: 'Typologies d’ouvrages données à titre indicatif — les opérations réelles et leurs visuels seront renseignés par BBC.',
+    eyebrow: 'Nos domaines',
+    title: 'Les familles de risques que nous traitons',
+    note: 'Chaque situation appelle ses propres points de contrôle. Les opérations réelles et leurs visuels seront renseignés par BBC.',
     items: [
-      { image: reference01, title: 'Clinique spécialisée', location: 'Cotonou', text: 'Coordination entre les corps d’état sur un site en activité, avec phasage des interventions.' },
-      { image: reference02, title: 'Immeuble de bureaux', location: 'Cotonou', text: 'Suivi des dispositions collectives de protection et des accès pendant toute la durée des travaux.' },
-      { image: reference03, title: 'Campus universitaire', location: 'Abomey-Calavi', text: 'Coordination sur un site fréquenté, avec séparation stricte des flux chantier et usagers.' },
-      { image: reference04, title: 'Hôtel en front de mer', location: 'Cotonou', text: 'Encadrement des travaux en hauteur et des interventions sur façade exposée.' },
-      { image: reference05, title: 'Domaine résidentiel', location: 'Grand-Popo', text: 'Coordination de plusieurs entreprises intervenant simultanément sur un même périmètre.' },
-      { image: reference06, title: 'Complexe hôtelier', location: 'Ouidah', text: 'Plan de circulation, zones de stockage et prévention des risques liés aux engins de levage.' },
-      { image: reference07, title: 'Résidence collective', location: 'Cotonou', text: 'Contrôles inopinés sur les protections de rives, les échafaudages et les accès provisoires.' },
-      { image: reference08, title: 'Centre d’imagerie médicale', location: 'Porto-Novo', text: 'Coordination des lots techniques en milieu sensible, avec contraintes d’hygiène renforcées.' },
-      { image: reference09, title: 'Espace aquatique', location: 'Grand-Popo', text: 'Prévention des risques liés aux ouvrages enterrés, aux réseaux et aux travaux en fouille.' },
+      { image: reference01, title: 'Levage et manutention', location: 'Chute de charge', text: 'Élingues, zones d’évolution et interdiction de survol du personnel vérifiées avant manœuvre.' },
+      { image: reference02, title: 'Travail en hauteur', location: 'Chute de personne', text: 'Protections de rives, points d’ancrage et moyens d’accès contrôlés avant toute intervention.' },
+      { image: reference03, title: 'Échafaudages', location: 'Effondrement', text: 'Montage, stabilité, planchers et garde-corps examinés à chaque phase d’avancement.' },
+      { image: reference04, title: 'Fouilles et réseaux', location: 'Ensevelissement', text: 'Blindages, pentes de talus et repérage des réseaux existants avant ouverture de la tranchée.' },
+      { image: reference05, title: 'Travaux par point chaud', location: 'Incendie', text: 'Éloignement des matières combustibles, moyens d’extinction et surveillance après intervention.' },
+      { image: reference06, title: 'Ouvrages de grande portée', location: 'Instabilité provisoire', text: 'Étaiements, phases de coulage et stabilité des éléments avant assemblage définitif.' },
+      { image: reference07, title: 'Circulation d’engins', location: 'Collision', text: 'Séparation des flux, champ de visibilité des conducteurs et balisage des zones d’évolution.' },
+      { image: reference08, title: 'Co-activité', location: 'Interférence', text: 'Phasage des interventions lorsque plusieurs entreprises occupent le même volume au même moment.' },
+      { image: reference09, title: 'Démolition et dépose', location: 'Effondrement', text: 'Ordre de dépose, zones d’exclusion et contrôle de la stabilité résiduelle de l’ouvrage.' },
     ],
   },
 
   statement: {
-    title: 'Un coordinateur sécurité disponible et impliqué',
+    title: 'La protection collective avant l’équipement individuel',
     paragraphs: [
-      'Oui, la coordination sécurité est une obligation. Pourquoi ? Parce que le BTP a toujours été une activité à forte accidentologie, et que la cohabitation de plusieurs entreprises sur un même site multiplie les situations à risque.',
-      'Le risque zéro n’existe pas, mais il se réduit vraiment. Avec un coordinateur qui connaît votre chantier, le visite régulièrement et passe aussi de manière inopinée, vous vous assurez que les dispositions prévues sont réellement tenues.',
-      'C’est du temps gagné sur les arrêts de chantier, et une responsabilité mieux couverte pour le maître d’ouvrage.',
+      'Un garde-corps protège tout le monde, tout le temps, sans rien demander à personne. Un harnais ne protège que celui qui le porte, s’il le porte correctement, et s’il est accroché.',
+      'C’est pourquoi l’ordre compte — on ne commence pas par la fin :',
     ],
+    bullets: [
+      'Supprimer le risque : peut-on assembler au sol plutôt qu’en hauteur ?',
+      'Protéger collectivement : garde-corps, filets, blindages, balisage des zones.',
+      'Équiper individuellement : harnais, casque, protections auditives, masques.',
+      'Former et informer : chacun doit savoir ce qui l’expose sur ce chantier précis.',
+    ],
+    closing: 'Dans cet ordre, et pas dans l’autre.',
   },
 
   testimonials: {
     eyebrow: 'Ils témoignent',
     items: [
-      { theme: 'Bonne communication', quote: 'Contrairement à beaucoup de contrôleurs qui ne se mettent pas à notre portée, avec un jargon juridique et technique complexe, ici on nous vulgarise et on synthétise les choix possibles. La réponse est compréhensible par tout le monde.', author: 'Promoteur immobilier', role: 'Témoignage à renseigner' },
-      { theme: 'Présence sur le terrain', quote: 'Les visites inopinées changent la donne : les équipes savent que les dispositions seront vérifiées, et elles les appliquent sans qu’on ait à le rappeler à chaque réunion.', author: 'Conducteur de travaux', role: 'Témoignage à renseigner' },
-      { theme: 'Responsabilité couverte', quote: 'Savoir que le volet sécurité est suivi par quelqu’un dont c’est le métier, et tracé dans les documents, c’est une inquiétude de moins sur une opération.', author: 'Maître d’ouvrage', role: 'Témoignage à renseigner' },
+      { theme: 'Des réponses utilisables', quote: 'On ne nous dit pas seulement que ce n’est pas conforme. On nous dit ce qu’il faut poser, où, et à quel moment du planning ça s’insère.', author: 'Conducteur de travaux', role: 'Témoignage à renseigner' },
+      { theme: 'Au bon moment', quote: 'Les observations arrivent pendant le montage de l’échafaudage, pas une fois qu’il est fini et que toutes les équipes travaillent dessus.', author: 'Chef de chantier', role: 'Témoignage à renseigner' },
+      { theme: 'Ce qu’on ne voit plus', quote: 'Les situations les plus dangereuses ne sont pas celles qu’on redoute : ce sont celles qu’on côtoie tous les jours et qu’on a fini par ne plus voir.', author: 'Maître d’ouvrage', role: 'Témoignage à renseigner' },
     ],
   },
 }

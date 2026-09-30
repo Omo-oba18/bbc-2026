@@ -5,12 +5,12 @@ Visuels provisoires issus d'Openverse, filtrés sur les licences **CC0 1.0** et 
 | Fichier | Titre d'origine | Licence | Source |
 |---|---|---|---|
 | `securite-sur-chantier-hero.jpg` | Ambassador Jacobson Learn about CMHR | PDM | https://www.flickr.com/photos/38144472@N04/8635950468 |
-| `reference-01.jpg` | Paccar Hall, Business School, contemporary architecture, Uni | CC0 | https://www.flickr.com/photos/71401718@N00/8664154921 |
-| `reference-02.jpg` | Rutgers University campus building in April | CC0 | https://commons.wikimedia.org/w/index.php?curid=25483248 |
-| `reference-03.jpg` | James H. Shannon Building (Building One), NIH campus, Bethes | PDM | https://www.flickr.com/photos/132318516@N08/19757410063 |
-| `reference-04.jpg` | Hotels | CC0 | https://www.flickr.com/photos/186116748@N05/49269430257 |
-| `reference-05.jpg` | Resort's swimming pool beach | CC0 | https://www.rawpixel.com/image/6031481/photo-image-public-domain-tropical-beach |
-| `reference-06.jpg` | Hue Riverside Boutique Resort's swimming pool | CC0 | https://www.flickr.com/photos/127378006@N08/16847098157 |
-| `reference-07.jpg` | Construction Workers | CC0 | https://stocksnap.io/photo/construction-workers-4UHTOF5OE9 |
-| `reference-08.jpg` | 20171205-RD-LSC-0148 | PDM | https://www.flickr.com/photos/41284017@N08/38885952982 |
-| `reference-09.jpg` | Hue Riverside Boutique Resort's swimming pool | CC0 | https://www.flickr.com/photos/127378006@N08/16868294079 |
+| `reference-01.jpg` | — | CC0 | https://www.rawpixel.com/image/6065670/free-public-domain-cc0-photo |
+| `reference-02.jpg` | 20130513-DM-LSC-1381 | PDM | https://www.flickr.com/photos/41284017@N08/8736233522 |
+| `reference-03.jpg` | Andamio | CC0 | https://www.flickr.com/photos/62518311@N00/196675992 |
+| `reference-04.jpg` | Construction site with heavy machinery | CC0 | https://www.rawpixel.com/image/9658829/construction |
+| `reference-05.jpg` | A worker wearing a protective helmet and gloves is welding a | CC0 | https://wordpress.org/photos/photo/81366759a5/ |
+| `reference-06.jpg` | I-69 Construction Indiana | CC0 | https://www.flickr.com/photos/132926214@N07/21154165034 |
+| `reference-07.jpg` | Wetlands construction Town Creek Culvert | CC0 | https://www.rawpixel.com/image/9656894/image-public-domain-construction-photo |
+| `reference-08.jpg` | Administration building | PDM | https://www.flickr.com/photos/38144472@N04/4034697589 |
+| `reference-09.jpg` | 20170502-072219LC | CC0 | https://www.flickr.com/photos/92947007@N03/34620533543 |
