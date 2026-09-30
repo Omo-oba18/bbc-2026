@@ -13,6 +13,7 @@ import { EnergieEnvironnementAcoustiquePage } from '../pages/EnergieEnvironnemen
 import { VerificationsExploitationPage } from '../pages/VerificationsExploitationPage'
 import { CoordinationSpsPage } from '../pages/CoordinationSpsPage'
 import { EvenementielPage } from '../pages/EvenementielPage'
+import { DiagnosticPemdPage } from '../pages/DiagnosticPemdPage'
 
 export function AppRouter() {
   return (
@@ -27,6 +28,7 @@ export function AppRouter() {
           <Route path="/missions/verifications-exploitation" element={<VerificationsExploitationPage />} />
           <Route path="/missions/coordination-sps" element={<CoordinationSpsPage />} />
           <Route path="/missions/evenementiel" element={<EvenementielPage />} />
+          <Route path="/missions/diagnostic-pemd" element={<DiagnosticPemdPage />} />
           <Route path="/missions/:slug" element={<DirectoryPage type="missions" eyebrow="Mission BBC" title="" description="" />} />
           <Route path="/competences" element={<DirectoryPage type="competences" eyebrow="Compétences" title="Nos domaines d’expertise" description="Les compétences techniques seront structurées ici afin de permettre une navigation simple par domaine." />} />
           <Route path="/competences/performance-energetique" element={<PerformanceEnergetiquePage />} />
