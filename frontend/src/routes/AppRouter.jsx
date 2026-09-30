@@ -18,6 +18,7 @@ import { MissionsPage } from '../pages/MissionsPage'
 import { NormesDeConstructionPage } from '../pages/NormesDeConstructionPage'
 import { SecuriteIncendiePage } from '../pages/SecuriteIncendiePage'
 import { ImmeublesGrandeHauteurPage } from '../pages/ImmeublesGrandeHauteurPage'
+import { ThermiquePage } from '../pages/ThermiquePage'
 
 export function AppRouter() {
   return (
@@ -40,6 +41,7 @@ export function AppRouter() {
           <Route path="/competences/normes-de-construction" element={<NormesDeConstructionPage />} />
           <Route path="/competences/securite-incendie" element={<SecuriteIncendiePage />} />
           <Route path="/competences/immeubles-grande-hauteur" element={<ImmeublesGrandeHauteurPage />} />
+          <Route path="/competences/thermique" element={<ThermiquePage />} />
           <Route path="/competences/:slug" element={<DirectoryPage type="competences" eyebrow="Compétence BBC" title="" description="" />} />
           <Route path="/agences" element={<DirectoryPage type="agences" eyebrow="Un réseau de proximité" title="Nos agences" description="Le réseau territorial BBC sera présenté avec les informations officielles de chaque implantation." />} />
           <Route path="/agences/:slug" element={<DirectoryPage type="agences" eyebrow="Agence BBC" title="" description="" />} />
