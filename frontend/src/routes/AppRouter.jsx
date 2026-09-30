@@ -15,6 +15,7 @@ import { CoordinationSpsPage } from '../pages/CoordinationSpsPage'
 import { EvenementielPage } from '../pages/EvenementielPage'
 import { DiagnosticPemdPage } from '../pages/DiagnosticPemdPage'
 import { MissionsPage } from '../pages/MissionsPage'
+import { NormesDeConstructionPage } from '../pages/NormesDeConstructionPage'
 
 export function AppRouter() {
   return (
@@ -34,6 +35,7 @@ export function AppRouter() {
           <Route path="/competences" element={<DirectoryPage type="competences" eyebrow="Compétences" title="Nos domaines d’expertise" description="Les compétences techniques seront structurées ici afin de permettre une navigation simple par domaine." />} />
           <Route path="/competences/performance-energetique" element={<PerformanceEnergetiquePage />} />
           <Route path="/competences/securite-sur-chantier" element={<SecuriteSurChantierPage />} />
+          <Route path="/competences/normes-de-construction" element={<NormesDeConstructionPage />} />
           <Route path="/competences/:slug" element={<DirectoryPage type="competences" eyebrow="Compétence BBC" title="" description="" />} />
           <Route path="/agences" element={<DirectoryPage type="agences" eyebrow="Un réseau de proximité" title="Nos agences" description="Le réseau territorial BBC sera présenté avec les informations officielles de chaque implantation." />} />
           <Route path="/agences/:slug" element={<DirectoryPage type="agences" eyebrow="Agence BBC" title="" description="" />} />
