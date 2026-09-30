@@ -1,0 +1,130 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.article {
+  padding: 3.5rem 0 4.5rem;
+  background: $color-white;
+}
+
+.column {
+  max-width: 78ch;
+  margin-inline: auto;
+}
+
+.section {
+  & + & {
+    margin-top: 3.25rem;
+    padding-top: 3rem;
+    border-top: 1px solid $color-border;
+  }
+
+  h2 {
+    margin-bottom: 1.5rem;
+    font-family: $font-family-display;
+    font-size: clamp(1.35rem, 2.8vw, 1.95rem);
+    font-weight: 400;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin-top: 1rem;
+    font-size: 0.97rem;
+    line-height: 1.8;
+  }
+}
+
+.sub {
+  margin-top: 2.1rem;
+  color: $color-accent-dark;
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  & + p {
+    margin-top: 0.7rem;
+  }
+}
+
+.list {
+  display: grid;
+  gap: 0.6rem;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    gap: 0.7rem;
+    color: $color-text-muted;
+    font-size: 0.95rem;
+    line-height: 1.75;
+
+    &::before {
+      flex: none;
+      width: 8px;
+      height: 8px;
+      margin-top: 0.62rem;
+      background: $color-accent-dark;
+      content: '';
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.links {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.4rem 0 0;
+  padding: 0;
+  list-style: none;
+
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  a {
+    display: block;
+    height: 100%;
+    padding: 1rem 1.1rem;
+    background: $color-background-soft;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    transition: border-color $transition-fast, transform $transition-fast, box-shadow $transition-fast;
+
+    &:hover,
+    &:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba($color-accent-dark, 0.5);
+      box-shadow: $shadow-sm;
+    }
+  }
+
+  strong {
+    display: block;
+    color: $color-navy-dark;
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+  }
+
+  span {
+    display: block;
+    margin-top: 0.35rem;
+    color: $color-text-muted;
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+}
+
+.note {
+  margin-top: 1.5rem !important;
+  padding: 0.95rem 1.15rem;
+  background: $color-navy-light;
+  border-left: 3px solid $color-accent-dark;
+  border-radius: 0 $radius-sm $radius-sm 0;
+  font-size: 0.86rem !important;
+  line-height: 1.7 !important;
+}

@@ -1,0 +1,33 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.articleHero {
+  padding: 3.5rem 0 3rem;
+  background: linear-gradient(180deg, $color-white 0%, $color-navy-light 100%);
+
+  h1 {
+    max-width: 22ch;
+    font-family: $font-family-display;
+    font-size: clamp(1.8rem, 4.2vw, 3rem);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+  }
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.7rem;
+  color: $color-accent-dark;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.lead {
+  max-width: 62ch;
+  margin-top: 1.25rem;
+  font-size: 1.02rem;
+  line-height: 1.7;
+}

@@ -14,6 +14,7 @@ import { VerificationsExploitationPage } from '../pages/VerificationsExploitatio
 import { CoordinationSpsPage } from '../pages/CoordinationSpsPage'
 import { EvenementielPage } from '../pages/EvenementielPage'
 import { DiagnosticPemdPage } from '../pages/DiagnosticPemdPage'
+import { MissionsPage } from '../pages/MissionsPage'
 
 export function AppRouter() {
   return (
@@ -21,7 +22,7 @@ export function AppRouter() {
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<HomePage />} />
-          <Route path="/missions" element={<DirectoryPage type="missions" eyebrow="Nos missions" title="Les missions de BBC" description="Une organisation pensée pour présenter clairement les missions de contrôle, de vérification et d’accompagnement." />} />
+          <Route path="/missions" element={<MissionsPage />} />
           <Route path="/missions/controle-construction" element={<ControleConstructionPage />} />
           <Route path="/missions/verifications-erp" element={<VerificationsErpPage />} />
           <Route path="/missions/energie-environnement-acoustique" element={<EnergieEnvironnementAcoustiquePage />} />
