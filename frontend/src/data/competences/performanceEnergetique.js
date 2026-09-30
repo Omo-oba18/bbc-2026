@@ -42,7 +42,7 @@ export const performanceEnergetique = {
       { image: reference01, title: 'Réhabilitation de logements collectifs', location: 'Cotonou', text: 'Reprise de l’enveloppe et des menuiseries, avec vérification des performances après travaux.' },
       { image: reference02, title: 'Résidence individuelle basse consommation', location: 'Abomey-Calavi', text: 'Contrôle de l’isolation, de la ventilation et de la production d’énergie en toiture.' },
       { image: reference03, title: 'Établissement d’enseignement', location: 'Porto-Novo', text: 'Étude des apports solaires, de la ventilation naturelle et du confort d’été des salles.' },
-      { image: reference04, title: 'Groupe scolaire', location: 'Parakou', text: 'Vérification de l’enveloppe et des équipements de rafraîchissement sur l’ensemble du site.' },
+      { image: reference04, title: 'Centre de formation', location: 'Parakou', text: 'Vérification de l’enveloppe vitrée et des équipements de rafraîchissement sur l’ensemble du site.' },
       { image: reference05, title: 'Bâtiment administratif', location: 'Cotonou', text: 'Contrôle des performances thermiques et accompagnement sur les attestations de fin de travaux.' },
       { image: reference06, title: 'Immeuble tertiaire', location: 'Cotonou', text: 'Analyse des façades vitrées, des protections solaires et des consommations prévisionnelles.' },
       { image: reference07, title: 'Campagne de thermographie', location: 'Sèmè-Podji', text: 'Relevés infrarouges sur l’enveloppe d’un parc existant pour localiser les déperditions.' },

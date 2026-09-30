@@ -5,7 +5,7 @@ Visuels provisoires issus d'Openverse, filtrés sur les licences **CC0 1.0** et 
 | Fichier | Titre d'origine | Licence | Source |
 |---|---|---|---|
 | `verifications-erp-hero.jpg` | Office Work | CC0 | https://stocksnap.io/photo/office-work-42H3JH8QI5 |
-| `reference-01.jpg` | Studio Bell. Calgary. | CC0 | https://www.flickr.com/photos/88123769@N02/37529795506 |
+| `reference-01.jpg` | Curved Building | CC0 | https://stocksnap.io/photo/curved-building-SNX6M0KJ2G |
 | `reference-02.jpg` | Paris: La 'Seine musicale' | PDM | https://www.flickr.com/photos/134469298@N03/32827860563 |
 | `reference-03.jpg` | Convention Centre Hong Kong. | CC0 | https://www.flickr.com/photos/88123769@N02/9064017367 |
 | `reference-04.jpg` | Exhibition lake | CC0 | https://www.flickr.com/photos/132271845@N05/48257235182 |
