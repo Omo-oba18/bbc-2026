@@ -1,0 +1,10 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.referenceNote {
+  margin-top: 2rem;
+  color: $color-text-muted;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  text-align: center;
+}

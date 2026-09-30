@@ -1,0 +1,73 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+/* ------------------------------------------------------------ process */
+
+.process {
+  padding: 3.25rem 0;
+  background: $color-navy-dark;
+}
+
+.processTitle {
+  max-width: 62ch;
+  color: $color-white;
+  font-family: $font-family-display;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.processGrid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 0;
+  list-style: none;
+
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.processCard {
+  display: flex;
+  gap: 0.85rem;
+  padding: 1.15rem 1.25rem;
+  background: rgba($color-white, 0.06);
+  border: 1px solid rgba($color-white, 0.12);
+  border-radius: $radius-md;
+
+  strong {
+    display: block;
+    color: $color-white;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+  }
+
+  p {
+    margin-top: 0.4rem;
+    color: rgba($color-white, 0.72);
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+}
+
+.check {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin-top: 0.15rem;
+
+  &::before {
+    display: block;
+    width: 6px;
+    height: 11px;
+    border-right: 2px solid $color-accent;
+    border-bottom: 2px solid $color-accent;
+    content: '';
+    transform: rotate(45deg) translate(1px, -2px);
+  }
+}

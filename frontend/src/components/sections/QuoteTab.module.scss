@@ -1,0 +1,33 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+/* ------------------------------------------------------- sticky quote tab */
+
+.quoteTab {
+  position: fixed;
+  top: 52%;
+  right: 0;
+  z-index: 900;
+  display: none;
+  padding: 0.85rem 1.1rem;
+  background: $color-accent-dark;
+  border-radius: $radius-sm 0 0 $radius-sm;
+  color: $color-white;
+  font-size: 0.64rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  writing-mode: vertical-rl;
+  box-shadow: $shadow-md;
+  transition: background $transition-fast;
+
+  &:hover,
+  &:focus-visible {
+    background: $color-navy-dark;
+  }
+
+  @include respond-to(desktop) {
+    display: block;
+  }
+}

@@ -1,0 +1,73 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+/* -------------------------------------------------------------- hero */
+
+.hero {
+  padding: 3.5rem 0 4rem;
+  background: linear-gradient(180deg, $color-white 0%, $color-navy-light 100%);
+}
+
+.heroGrid {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+
+  @include respond-to(desktop) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+    gap: 3.5rem;
+  }
+}
+
+.heroCopy {
+  h1 {
+    font-family: $font-family-display;
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+  }
+}
+
+.heroLead {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 1.4rem;
+  color: $color-navy;
+  font-size: 0.82rem;
+  font-weight: 900;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  span {
+    flex: none;
+    width: 10px;
+    height: 10px;
+    margin-top: 0.28rem;
+    background: $color-accent-dark;
+    transform: rotate(45deg);
+  }
+}
+
+.heroText {
+  max-width: 54ch;
+  margin: 1.4rem 0 2rem;
+  font-size: 0.97rem;
+  line-height: 1.75;
+}
+
+.heroVisual {
+  margin: 0;
+  overflow: hidden;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-md;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+  }
+}

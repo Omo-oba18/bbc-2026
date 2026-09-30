@@ -1,0 +1,67 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+/* ---------------------------------------------------------- statement */
+
+.statement {
+  padding: 4.5rem 0;
+  background: $color-navy-light;
+}
+
+.statementInner {
+  max-width: 62ch;
+  margin-inline: auto;
+  text-align: center;
+
+  h2 {
+    font-family: $font-family-display;
+    font-size: clamp(1.6rem, 3.4vw, 2.6rem);
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin-top: 1.15rem;
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+}
+
+/* ------------------------------------------- statement : liste à puces */
+
+.statementList {
+  display: grid;
+  gap: 0.7rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+
+  li {
+    display: flex;
+    gap: 0.7rem;
+    color: $color-text-muted;
+    font-size: 0.92rem;
+    line-height: 1.7;
+
+    &::before {
+      flex: none;
+      width: 9px;
+      height: 9px;
+      margin-top: 0.55rem;
+      background: $color-accent-dark;
+      content: '';
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.statementClosing {
+  display: block;
+  margin-top: 1.5rem;
+  color: $color-accent-dark !important;
+  font-size: 0.86rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}

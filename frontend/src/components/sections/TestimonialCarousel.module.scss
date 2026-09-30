@@ -1,0 +1,123 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+/* ------------------------------------------------------- testimonials */
+
+.testimonials {
+  padding: 4.5rem 0 4rem;
+  background: $color-background-soft;
+}
+
+.testimonialBox {
+  max-width: 760px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 84px;
+  height: 84px;
+  background: $color-navy-dark;
+  border: 3px solid $color-white;
+  border-radius: 50%;
+  color: $color-white;
+  font-family: $font-family-display;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  box-shadow: $shadow-sm;
+}
+
+.testimonialTheme {
+  display: block;
+  margin-top: 1.25rem;
+  color: $color-accent-dark;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.testimonialBox blockquote {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) 34px;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 1rem 0 0;
+
+  p {
+    color: $color-navy-dark;
+    font-size: clamp(0.95rem, 1.9vw, 1.2rem);
+    font-style: italic;
+    line-height: 1.65;
+  }
+
+  button {
+    width: 34px;
+    height: 34px;
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: 50%;
+    color: $color-navy-dark;
+    font-size: 1.15rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background $transition-fast, color $transition-fast;
+
+    &:hover,
+    &:focus-visible {
+      background: $color-navy-dark;
+      color: $color-white;
+    }
+  }
+}
+
+.testimonialBox footer {
+  margin-top: 1.25rem;
+
+  strong {
+    display: block;
+    color: $color-navy-dark;
+    font-size: 0.8rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  span {
+    display: block;
+    margin-top: 0.2rem;
+    color: $color-text-muted;
+    font-size: 0.72rem;
+  }
+}
+
+.dots {
+  display: flex;
+  gap: 0.45rem;
+  justify-content: center;
+  margin-top: 1.25rem;
+
+  button {
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    background: rgba($color-navy-dark, 0.22);
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background $transition-fast, transform $transition-fast;
+
+    &:hover {
+      background: rgba($color-navy-dark, 0.45);
+    }
+  }
+}
+
+.dotActive {
+  background: $color-accent-dark !important;
+  transform: scale(1.25);
+}
