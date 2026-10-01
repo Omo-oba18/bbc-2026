@@ -17,6 +17,7 @@ import { DiagnosticPemdPage } from '../pages/DiagnosticPemdPage'
 import { MissionsPage } from '../pages/MissionsPage'
 import { CompetencesPage } from '../pages/CompetencesPage'
 import { AgencesPage } from '../pages/AgencesPage'
+import { GroupePage } from '../pages/GroupePage'
 import { NormesDeConstructionPage } from '../pages/NormesDeConstructionPage'
 import { SecuriteIncendiePage } from '../pages/SecuriteIncendiePage'
 import { ImmeublesGrandeHauteurPage } from '../pages/ImmeublesGrandeHauteurPage'
@@ -57,7 +58,7 @@ export function AppRouter() {
           <Route path="/competences/:slug" element={<DirectoryPage type="competences" eyebrow="Compétence BBC" title="" description="" />} />
           <Route path="/agences" element={<AgencesPage />} />
           <Route path="/agences/:slug" element={<DirectoryPage type="agences" eyebrow="Agence BBC" title="" description="" />} />
-          <Route path="/groupe" element={<DirectoryPage type="groupe" eyebrow="Le groupe" title="BBC, une équipe et une histoire" description="Une section dédiée à l’histoire, aux équipes, aux agréments, au recrutement et aux actualités du groupe." />} />
+          <Route path="/groupe" element={<GroupePage />} />
           <Route path="/groupe/:slug" element={<DirectoryPage type="groupe" eyebrow="Groupe BBC" title="" description="" />} />
           <Route path="/realisations" element={<ProjectsPage />} />
           <Route path="/contact" element={<ContactPage />} />
