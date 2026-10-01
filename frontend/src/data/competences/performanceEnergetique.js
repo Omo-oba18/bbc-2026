@@ -55,7 +55,7 @@ export const performanceEnergetique = {
     title: 'La performance énergétique est à la croisée de la technique et du réglementaire',
     paragraphs: [
       'Votre opération avance, et vous découvrez qu’un volet réglementaire encadre chacun de vos choix techniques : c’est le lot de la performance énergétique.',
-      'Internaliser cette conformité suppose des compétences nombreuses et pointues. Quelques exemples de ce que la mission implique :',
+      'Tenir cette conformité en interne suppose de suivre plusieurs disciplines à la fois. Ce que la compétence recouvre, concrètement :',
     ],
     bullets: [
       'Connaître les textes applicables et leurs mises à jour pour identifier les obligations réelles d’un ouvrage.',
