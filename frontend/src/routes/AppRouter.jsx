@@ -20,6 +20,7 @@ import { AgencesPage } from '../pages/AgencesPage'
 import { GroupePage } from '../pages/GroupePage'
 import { HistoirePage } from '../pages/HistoirePage'
 import { EquipePage } from '../pages/EquipePage'
+import { AgrementsPage } from '../pages/AgrementsPage'
 import { NormesDeConstructionPage } from '../pages/NormesDeConstructionPage'
 import { SecuriteIncendiePage } from '../pages/SecuriteIncendiePage'
 import { ImmeublesGrandeHauteurPage } from '../pages/ImmeublesGrandeHauteurPage'
@@ -63,6 +64,7 @@ export function AppRouter() {
           <Route path="/groupe" element={<GroupePage />} />
           <Route path="/groupe/histoire" element={<HistoirePage />} />
           <Route path="/groupe/equipe" element={<EquipePage />} />
+          <Route path="/groupe/agrements" element={<AgrementsPage />} />
           <Route path="/groupe/:slug" element={<DirectoryPage type="groupe" eyebrow="Groupe BBC" title="" description="" />} />
           <Route path="/realisations" element={<ProjectsPage />} />
           <Route path="/contact" element={<ContactPage />} />

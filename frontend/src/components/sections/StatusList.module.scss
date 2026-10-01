@@ -1,0 +1,110 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+/* ------------------------------------------------- domaines et statuts */
+
+.statuts {
+  padding: 4rem 0 4.5rem;
+  background: $color-background-soft;
+}
+
+.lead {
+  max-width: 68ch;
+  margin: -1.75rem auto 0;
+  color: $color-text-muted;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  text-align: center;
+}
+
+.liste {
+  max-width: 82ch;
+  margin: 2.5rem auto 0;
+  padding: 0;
+  list-style: none;
+  background: $color-white;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  overflow: hidden;
+}
+
+.ligne {
+  & + & {
+    border-top: 1px solid $color-border;
+  }
+}
+
+/* Les rangées non cliquables partagent la même boîte que .lien. */
+.ligne,
+.lien {
+  display: block;
+}
+
+.lien {
+  transition: background-color $transition-fast;
+
+  &:hover,
+  &:focus-visible {
+    background: $color-navy-light;
+  }
+}
+
+.ligne > *,
+.lien {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.05rem 1.25rem;
+
+  @include respond-to(tablet) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+}
+
+.corps {
+  display: block;
+
+  strong {
+    display: block;
+    color: $color-navy-dark;
+    font-size: 0.92rem;
+    font-weight: 800;
+  }
+}
+
+.texte {
+  display: block;
+  margin-top: 0.25rem;
+  color: $color-text-muted;
+  font-size: 0.85rem;
+  line-height: 1.65;
+}
+
+.statut {
+  flex: none;
+  align-self: flex-start;
+  padding: 0.3rem 0.7rem;
+  background: rgba($color-accent-dark, 0.12);
+  border-radius: $radius-sm;
+  color: $color-accent-dark;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  @include respond-to(tablet) {
+    align-self: center;
+  }
+}
+
+/* Statut non renseigné : gris, sans la pastille verte qui vaut affirmation. */
+.attente {
+  background: $color-background-soft;
+  border: 1px solid $color-border;
+  color: $color-text-muted;
+  font-weight: 700;
+}
