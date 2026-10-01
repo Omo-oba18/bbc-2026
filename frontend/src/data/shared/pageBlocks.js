@@ -1,7 +1,7 @@
-import atout01 from '../../assets/images/common/atout-01.jpg'
-import atout02 from '../../assets/images/common/atout-02.jpg'
-import atout03 from '../../assets/images/common/atout-03.jpg'
-import atout04 from '../../assets/images/common/atout-04.jpg'
+import atout01 from '../../assets/images/common/atout-01.webp'
+import atout02 from '../../assets/images/common/atout-02.webp'
+import atout03 from '../../assets/images/common/atout-03.webp'
+import atout04 from '../../assets/images/common/atout-04.webp'
 
 /**
  * Blocs repris à l'identique sur toutes les pages mission et compétence.

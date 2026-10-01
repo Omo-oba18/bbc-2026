@@ -1,13 +1,13 @@
-import heroImage from '../../assets/images/competences/securite-sur-chantier/securite-sur-chantier-hero.jpg'
-import reference01 from '../../assets/images/competences/securite-sur-chantier/reference-01.jpg'
-import reference02 from '../../assets/images/competences/securite-sur-chantier/reference-02.jpg'
-import reference03 from '../../assets/images/competences/securite-sur-chantier/reference-03.jpg'
-import reference04 from '../../assets/images/competences/securite-sur-chantier/reference-04.jpg'
-import reference05 from '../../assets/images/competences/securite-sur-chantier/reference-05.jpg'
-import reference06 from '../../assets/images/competences/securite-sur-chantier/reference-06.jpg'
-import reference07 from '../../assets/images/competences/securite-sur-chantier/reference-07.jpg'
-import reference08 from '../../assets/images/competences/securite-sur-chantier/reference-08.jpg'
-import reference09 from '../../assets/images/competences/securite-sur-chantier/reference-09.jpg'
+import heroImage from '../../assets/images/competences/securite-sur-chantier/securite-sur-chantier-hero.webp'
+import reference01 from '../../assets/images/competences/securite-sur-chantier/reference-01.webp'
+import reference02 from '../../assets/images/competences/securite-sur-chantier/reference-02.webp'
+import reference03 from '../../assets/images/competences/securite-sur-chantier/reference-03.webp'
+import reference04 from '../../assets/images/competences/securite-sur-chantier/reference-04.webp'
+import reference05 from '../../assets/images/competences/securite-sur-chantier/reference-05.webp'
+import reference06 from '../../assets/images/competences/securite-sur-chantier/reference-06.webp'
+import reference07 from '../../assets/images/competences/securite-sur-chantier/reference-07.webp'
+import reference08 from '../../assets/images/competences/securite-sur-chantier/reference-08.webp'
+import reference09 from '../../assets/images/competences/securite-sur-chantier/reference-09.webp'
 
 /**
  * Contenu de la compétence « Sécurité sur chantier ».

@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 import { competenceItems, groupItems, missionItems, agencyItems } from '../../constants/navigation'
 import { Container } from './Container'
 import styles from './Navbar.module.scss'
-import logo from '../../assets/images/logo-bbc.jpg'
+import logo from '../../assets/images/logo-bbc.webp'
 
 const menuGroups = [
   { title: 'Compétences', path: '/competences', items: competenceItems },

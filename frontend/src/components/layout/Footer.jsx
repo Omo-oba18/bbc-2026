@@ -3,7 +3,7 @@ import { Container } from './Container'
 import { competenceItems, groupItems, missionItems } from '../../constants/navigation'
 import { siteData } from '../../data/siteData'
 import styles from './Footer.module.scss'
-import logo from '../../assets/images/logo-bbc.jpg'
+import logo from '../../assets/images/logo-bbc.webp'
 
 export function Footer() {
   return (
