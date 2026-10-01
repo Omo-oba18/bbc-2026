@@ -18,6 +18,7 @@ import { MissionsPage } from '../pages/MissionsPage'
 import { CompetencesPage } from '../pages/CompetencesPage'
 import { AgencesPage } from '../pages/AgencesPage'
 import { GroupePage } from '../pages/GroupePage'
+import { HistoirePage } from '../pages/HistoirePage'
 import { NormesDeConstructionPage } from '../pages/NormesDeConstructionPage'
 import { SecuriteIncendiePage } from '../pages/SecuriteIncendiePage'
 import { ImmeublesGrandeHauteurPage } from '../pages/ImmeublesGrandeHauteurPage'
@@ -59,6 +60,7 @@ export function AppRouter() {
           <Route path="/agences" element={<AgencesPage />} />
           <Route path="/agences/:slug" element={<DirectoryPage type="agences" eyebrow="Agence BBC" title="" description="" />} />
           <Route path="/groupe" element={<GroupePage />} />
+          <Route path="/groupe/histoire" element={<HistoirePage />} />
           <Route path="/groupe/:slug" element={<DirectoryPage type="groupe" eyebrow="Groupe BBC" title="" description="" />} />
           <Route path="/realisations" element={<ProjectsPage />} />
           <Route path="/contact" element={<ContactPage />} />
