@@ -1,0 +1,68 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+/* -------------------------------------------------------------- rôles */
+
+.roles {
+  padding: 3.5rem 0 4rem;
+  background: $color-background-soft;
+}
+
+/* Même colonne de lecture qu'ArticleBody, pour que les titres de la page
+   restent sur un seul axe. */
+.column {
+  max-width: 78ch;
+  margin-inline: auto;
+}
+
+.title {
+  font-family: $font-family-display;
+  font-size: clamp(1.35rem, 2.8vw, 1.95rem);
+  font-weight: 400;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.lead {
+  max-width: 68ch;
+  margin-top: 1rem;
+  color: $color-text-muted;
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  margin: 2.25rem 0 0;
+  padding: 0;
+  list-style: none;
+
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.card {
+  padding: 1.3rem 1.4rem;
+  background: $color-white;
+  border: 1px solid $color-border;
+  border-top: 3px solid $color-accent-dark;
+  border-radius: $radius-md;
+
+  strong {
+    display: block;
+    color: $color-navy-dark;
+    font-family: $font-family-display;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  p {
+    margin-top: 0.55rem;
+    color: $color-text-muted;
+    font-size: 0.91rem;
+    line-height: 1.75;
+  }
+}
