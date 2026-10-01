@@ -23,6 +23,7 @@ import { AcoustiquePage } from '../pages/AcoustiquePage'
 import { ElectricitePage } from '../pages/ElectricitePage'
 import { ParasismiquePage } from '../pages/ParasismiquePage'
 import { GruesLevagePage } from '../pages/GruesLevagePage'
+import { AscenseursPage } from '../pages/AscenseursPage'
 
 export function AppRouter() {
   return (
@@ -50,6 +51,7 @@ export function AppRouter() {
           <Route path="/competences/electricite" element={<ElectricitePage />} />
           <Route path="/competences/parasismique" element={<ParasismiquePage />} />
           <Route path="/competences/grues-levage" element={<GruesLevagePage />} />
+          <Route path="/competences/ascenseurs" element={<AscenseursPage />} />
           <Route path="/competences/:slug" element={<DirectoryPage type="competences" eyebrow="Compétence BBC" title="" description="" />} />
           <Route path="/agences" element={<DirectoryPage type="agences" eyebrow="Un réseau de proximité" title="Nos agences" description="Le réseau territorial BBC sera présenté avec les informations officielles de chaque implantation." />} />
           <Route path="/agences/:slug" element={<DirectoryPage type="agences" eyebrow="Agence BBC" title="" description="" />} />
