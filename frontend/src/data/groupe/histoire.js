@@ -1,6 +1,12 @@
 /**
  * /groupe/histoire
  *
+ * Disposition reprise de la page « à propos » du site de référence :
+ * héros avec accroche décalée, bloc de motivations à puces, chronologie en
+ * grille de cartes à trois colonnes, puis le bloc consacré aux équipes.
+ * Sans la mosaïque de portraits : nous n'avons pas les photos, et des
+ * visages empruntés présenteraient comme nôtres des gens qui ne le sont pas.
+ *
  * Une page d'histoire est faite de faits datés, et aucun de ceux de BBC ne
  * m'est connu : ni la date de constitution, ni celle du premier agrément, ni
  * les ouvertures d'implantations. Rien n'est donc daté ici.
@@ -10,22 +16,37 @@
  *     logique, avec `date: null` tant que la valeur réelle n'est pas fournie ;
  *   — la genèse du métier lui-même, qui ne dépend d'aucune donnée interne.
  *
- * Les cinq dates à fournir pour achever la page sont exactement les cinq
+ * Les six dates à fournir pour achever la page sont exactement les six
  * `date: null` ci-dessous. Rien d'autre n'est à compléter.
  *
  * Contenu tenu distinct de groupeIndex, qui traite déjà l'indépendance, les
- * agréments et la responsabilité engagée : on n'y revient pas.
+ * agréments et la responsabilité engagée, et de equipe, qui traite les rôles.
  */
 export const histoire = {
   hero: {
     eyebrow: 'Le groupe',
     title: 'Notre histoire',
-    lead: 'Un bureau de contrôle ne se juge pas à son ancienneté, mais à ce qu’il a appris en exerçant. Cette page dit ce que raconte la trajectoire d’un bureau, et par quelles étapes elle passe.',
+    accent: 'D’où nous venons, et par quelles étapes.',
+    lead: 'Un bureau de contrôle ne se juge pas à son ancienneté, mais à ce qu’il a appris en exerçant.',
+  },
+
+  motivations: {
+    intro: [
+      'Un bâtiment est utilisé par des gens qui ne liront jamais notre rapport. C’est pour eux qu’il est écrit.',
+      'Un avis qu’on ne peut pas appliquer ne protège personne : il ne fait que déplacer la responsabilité.',
+    ],
+    title: 'Nos motivations',
+    paragraphs: [
+      'Le contrôle technique n’a pas de résultat visible. Quand il fonctionne, il ne se passe rien : l’escalier tient, le désenfumage part, la toiture passe la saison des pluies. Personne ne remarque le travail qui a conduit là.',
+      'C’est une discipline qui s’exerce sans applaudissements, et c’est ce qui en fait l’intérêt. Nous ne cherchons pas à produire des documents, mais à ce qu’il n’arrive rien à ceux qui occuperont l’ouvrage longtemps après notre dernière visite.',
+    ],
+    closing: 'Ce qui ne se voit pas est ce qui tient',
   },
 
   chronologie: {
+    eyebrow: 'Notre trajectoire',
     title: 'Les jalons qui comptent',
-    lead: 'La trajectoire d’un bureau de contrôle tient à cinq étapes, qui se présentent dans cet ordre. Les dates propres à BBC seront publiées dès qu’elles seront établies sur pièces.',
+    lead: 'La trajectoire d’un bureau de contrôle tient à six étapes, qui se présentent dans cet ordre. Les dates propres à BBC seront publiées dès qu’elles seront établies sur pièces.',
     jalons: [
       {
         date: null,
@@ -52,8 +73,13 @@ export const histoire = {
         title: 'La montée en effectif',
         text: 'Un bureau ne grandit pas plus vite que sa capacité à recruter des ingénieurs et des techniciens prêts à engager un avis sous leur propre nom.',
       },
+      {
+        date: null,
+        title: 'Le renouvellement des autorisations',
+        text: 'Une autorisation d’exercer ne s’obtient pas une fois pour toutes. Elle se renouvelle, et le renouvellement vérifie que les moyens déclarés à l’origine sont toujours là.',
+      },
     ],
-    note: 'Aucune date n’est affichée tant qu’elle n’est pas confirmée par les documents de l’entreprise. Un repère évidé signale une date encore absente.',
+    note: 'Aucune date n’est affichée tant qu’elle n’est pas confirmée par les documents de l’entreprise.',
   },
 
   sections: [
@@ -90,14 +116,16 @@ export const histoire = {
     },
 
     {
-      title: 'Situer l’entreprise aujourd’hui',
+      title: 'BBC, ce sont d’abord des gens',
       blocks: [
-        { type: 'p', text: 'Trois pages répondent aux questions qu’on se pose avant de confier une mission.' },
+        { type: 'p', text: 'Un bureau de contrôle ne possède ni usine, ni brevet, ni stock. Tout ce qu’il apporte tient dans le jugement de ceux qui signent ses avis, et ce jugement ne se délègue pas à une procédure : aucune grille ne dit à quel moment une fissure cesse d’être un défaut d’aspect.' },
+        { type: 'p', text: 'La question utile n’est donc pas de savoir combien nous sommes, mais qui interviendra sur votre opération, et sur quoi cette personne est qualifiée pour se prononcer.' },
         { type: 'links', items: [
+          { to: '/groupe/equipe', label: 'Équipe', text: 'Les fonctions qui se partagent le suivi d’un dossier.' },
           { to: '/groupe/agrements', label: 'Agréments', text: 'Les domaines sur lesquels nous sommes autorisés à intervenir.' },
-          { to: '/groupe/equipe', label: 'Équipe', text: 'Les qualifications de ceux qui signent les avis.' },
           { to: '/agences', label: 'Implantations', text: 'Depuis où nous nous déplaçons.' },
         ] },
+        { type: 'note', text: 'Les portraits de l’équipe seront publiés en même temps que les profils de chacun. Nous préférons une page sans visages à une page illustrée par des inconnus.' },
       ],
     },
   ],

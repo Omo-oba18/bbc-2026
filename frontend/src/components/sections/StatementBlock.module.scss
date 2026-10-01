@@ -65,3 +65,14 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+
+/* Puces d'introduction, posées avant le titre. Même marqueur losange que
+   .statementList, dont elle hérite ; seules les marges changent. */
+.statementIntro {
+  margin: 0 0 2.25rem;
+
+  li {
+    color: $color-text;
+    font-size: 0.95rem;
+  }
+}

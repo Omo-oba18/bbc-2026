@@ -31,3 +31,31 @@
   font-size: 1.02rem;
   line-height: 1.7;
 }
+
+/* Titre et accroche côte à côte. N'existe que si la page fournit `accent` :
+   sans elle, le h1 reste seul dans le flux, inchangé. */
+.withAccent {
+  @include respond-to(desktop) {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2.5rem;
+  }
+}
+
+.accent {
+  margin-top: 1rem;
+  color: $color-accent-dark;
+  font-family: $font-family-display;
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  font-weight: 400;
+  line-height: 1.4;
+
+  @include respond-to(desktop) {
+    flex: none;
+    max-width: 30ch;
+    margin-top: 0;
+    padding-bottom: 0.4rem;
+    text-align: right;
+  }
+}

@@ -1,5 +1,6 @@
 import { QuoteTab } from '../components/sections/QuoteTab'
 import { ArticleHero } from '../components/sections/ArticleHero'
+import { StatementBlock } from '../components/sections/StatementBlock'
 import { Timeline } from '../components/sections/Timeline'
 import { ArticleBody } from '../components/sections/ArticleBody'
 import { histoire } from '../data/groupe/histoire'
@@ -13,6 +14,7 @@ export function HistoirePage() {
     <>
       <QuoteTab />
       <ArticleHero {...histoire.hero} />
+      <StatementBlock {...histoire.motivations} />
       <Timeline {...histoire.chronologie} />
       <ArticleBody sections={histoire.sections} />
     </>
