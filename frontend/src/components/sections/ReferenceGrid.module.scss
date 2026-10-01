@@ -67,3 +67,25 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
+
+/* carte cliquable : la grille sert alors d'index de pages */
+
+.referenceLink {
+  display: block;
+  height: 100%;
+
+  h3 {
+    transition: color $transition-fast;
+  }
+
+  &:hover h3,
+  &:focus-visible h3 {
+    color: $color-accent-dark;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-accent-dark;
+    outline-offset: 4px;
+    border-radius: $radius-md;
+  }
+}

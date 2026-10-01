@@ -15,6 +15,7 @@ import { CoordinationSpsPage } from '../pages/CoordinationSpsPage'
 import { EvenementielPage } from '../pages/EvenementielPage'
 import { DiagnosticPemdPage } from '../pages/DiagnosticPemdPage'
 import { MissionsPage } from '../pages/MissionsPage'
+import { CompetencesPage } from '../pages/CompetencesPage'
 import { NormesDeConstructionPage } from '../pages/NormesDeConstructionPage'
 import { SecuriteIncendiePage } from '../pages/SecuriteIncendiePage'
 import { ImmeublesGrandeHauteurPage } from '../pages/ImmeublesGrandeHauteurPage'
@@ -40,7 +41,7 @@ export function AppRouter() {
           <Route path="/missions/evenementiel" element={<EvenementielPage />} />
           <Route path="/missions/diagnostic-pemd" element={<DiagnosticPemdPage />} />
           <Route path="/missions/:slug" element={<DirectoryPage type="missions" eyebrow="Mission BBC" title="" description="" />} />
-          <Route path="/competences" element={<DirectoryPage type="competences" eyebrow="Compétences" title="Nos domaines d’expertise" description="Les compétences techniques seront structurées ici afin de permettre une navigation simple par domaine." />} />
+          <Route path="/competences" element={<CompetencesPage />} />
           <Route path="/competences/performance-energetique" element={<PerformanceEnergetiquePage />} />
           <Route path="/competences/securite-sur-chantier" element={<SecuriteSurChantierPage />} />
           <Route path="/competences/normes-de-construction" element={<NormesDeConstructionPage />} />
