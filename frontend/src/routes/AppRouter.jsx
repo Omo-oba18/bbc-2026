@@ -16,6 +16,7 @@ import { EvenementielPage } from '../pages/EvenementielPage'
 import { DiagnosticPemdPage } from '../pages/DiagnosticPemdPage'
 import { MissionsPage } from '../pages/MissionsPage'
 import { CompetencesPage } from '../pages/CompetencesPage'
+import { AgencesPage } from '../pages/AgencesPage'
 import { NormesDeConstructionPage } from '../pages/NormesDeConstructionPage'
 import { SecuriteIncendiePage } from '../pages/SecuriteIncendiePage'
 import { ImmeublesGrandeHauteurPage } from '../pages/ImmeublesGrandeHauteurPage'
@@ -54,7 +55,7 @@ export function AppRouter() {
           <Route path="/competences/grues-levage" element={<GruesLevagePage />} />
           <Route path="/competences/ascenseurs" element={<AscenseursPage />} />
           <Route path="/competences/:slug" element={<DirectoryPage type="competences" eyebrow="Compétence BBC" title="" description="" />} />
-          <Route path="/agences" element={<DirectoryPage type="agences" eyebrow="Un réseau de proximité" title="Nos agences" description="Le réseau territorial BBC sera présenté avec les informations officielles de chaque implantation." />} />
+          <Route path="/agences" element={<AgencesPage />} />
           <Route path="/agences/:slug" element={<DirectoryPage type="agences" eyebrow="Agence BBC" title="" description="" />} />
           <Route path="/groupe" element={<DirectoryPage type="groupe" eyebrow="Le groupe" title="BBC, une équipe et une histoire" description="Une section dédiée à l’histoire, aux équipes, aux agréments, au recrutement et aux actualités du groupe." />} />
           <Route path="/groupe/:slug" element={<DirectoryPage type="groupe" eyebrow="Groupe BBC" title="" description="" />} />

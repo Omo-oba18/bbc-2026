@@ -23,8 +23,14 @@ export const missionItems = [
   { label: 'Toutes les missions', slug: '' },
 ]
 
+// Implantations provisoires : à remplacer par le réseau réel de BBC.
+// Elles alimentent le menu, le pied de page, l'accueil et l'index /agences.
 export const agencyItems = [
-  { label: 'Agence à définir', slug: 'agence-a-definir' },
+  { label: 'Cotonou', slug: 'cotonou' },
+  { label: 'Abomey-Calavi', slug: 'abomey-calavi' },
+  { label: 'Porto-Novo', slug: 'porto-novo' },
+  { label: 'Bohicon', slug: 'bohicon' },
+  { label: 'Parakou', slug: 'parakou' },
 ]
 
 export const groupItems = [

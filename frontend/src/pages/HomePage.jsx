@@ -135,7 +135,7 @@ export function HomePage() {
         <div className="container">
           <div className={styles.sectionHeading}>
             <div><span className={styles.eyebrow}>Un réseau de proximité</span><h2>Nos agences</h2></div>
-            <p>Le réseau BBC sera présenté ici avec les coordonnées, responsables et zones d’intervention validées.</p>
+            <p>Implantations provisoires. Les coordonnées, responsables et zones d’intervention seront renseignés par BBC.</p>
           </div>
           <div className={styles.agencyGrid}>
             {siteData.agencies.map((agency, index) => (
@@ -145,7 +145,6 @@ export function HomePage() {
                 <small>Voir l’agence →</small>
               </Link>
             ))}
-            {Array.from({ length: 7 }).map((_, index) => <div key={`placeholder-${index}`} className={`${styles.agencyCard} ${styles.placeholderCard}`}><span>{String(index + 2).padStart(2, '0')}</span><strong>Localisation à définir</strong><small>Donnée à renseigner</small></div>)}
           </div>
         </div>
       </section>
